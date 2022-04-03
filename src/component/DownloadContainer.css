@@ -1,0 +1,163 @@
+.download-container {
+    display: flex;
+    justify-content: center;
+    padding: 160px 100px;
+    background-color: #ffffff;
+    column-gap: 5rem;
+  }
+  .app-illustration {
+    display: flex;
+    flex-basis: 50%;
+  }
+  
+  .download-steps {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+  .download-steps header {
+    display: flex;
+  }
+  .download-steps aside {
+    display: flex;
+    align-items: center;
+  }
+  .download-steps aside img {
+    margin-top: 2rem;
+  }
+  .download-steps aside span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 138px;
+    height: 40px;
+    margin-left: 1rem;
+    background: rgba(253, 215, 171, 0.26);
+    border-radius: 40px;
+  }
+  .download-steps aside p {
+    font-family: 'gilmer-medium';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #f7931e;
+  }
+  .download-steps header h3 {
+    font-family: 'oduda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: #12381d;
+  }
+  .download-steps header h3 span {
+    color: #fbb03b;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    padding-left: 33px;
+    position: relative;
+  }
+  .steps .step {
+    padding-bottom: 2rem;
+    border-left: 1px dashed #f7931e;
+    min-height: 200px;
+  }
+  .steps .step:nth-child(3) {
+    border-left: 0;
+    padding-bottom: 0;
+  }
+  .steps .step h6 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #1c512b;
+    padding-left: 70px;
+  }
+  .steps .step p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2b703f;
+    padding-left: 70px;
+    margin-top: 20px;
+  }
+  .steps aside {
+    position: absolute;
+    left: 0px;
+    z-index: 1111;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    background: #fef4e8;
+  }
+  .steps aside p {
+    font-family: 'gilmer-medium';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #12381d;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .download-steps footer {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ffffff;
+  }
+  .download-steps footer button {
+    outline: none;
+    border: none;
+    margin-left: 2rem;
+    background-color: #fff;
+  }
+  @media screen and (max-width: 1068px) {
+    .download-container {
+      padding: 160px 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .download-container {
+      flex-direction: column;
+      padding: 160px 20px;
+    }
+    .download-steps {
+      margin-top: 50px;
+    }
+    .download-steps header h3 {
+      font-size: 40px;
+      line-height: auto;
+    }
+    .steps {
+      padding-left: 24px;
+    }
+    .steps .step h6 {
+      padding-left: 50px;
+    }
+    .steps .step p {
+      padding-left: 50px;
+    }
+    .steps aside {
+      left: 0px;
+      width: 50px;
+      height: 50px;
+    }
+    .download-steps footer {
+      column-gap: 2rem;
+    }
+    .download-steps footer button {
+      margin-left: 0;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .download-steps footer {
+      column-gap: 5px;
+    }
+  }
