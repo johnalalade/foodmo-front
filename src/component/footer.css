@@ -41,6 +41,10 @@
     margin-top: 3rem;
     position: relative;
   }
+  .newsletter form {
+    display: flex;
+    position: relative;
+  }
   .newsletter span input {
     overflow: hidden;
     padding: 0px 2rem;
@@ -60,7 +64,7 @@
     line-height: 161.5%;
     color: #cacaca;
   }
-  .newsletter button {
+  .newsletter form button {
     display: flex;
     justify-content: center;
     align-items: center;

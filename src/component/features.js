@@ -1,7 +1,7 @@
 import React from 'react';
 import './features.css';
 import feautureLogo from '../Images/logo-feature.svg'
-
+import ImageL from '../Images/feature-3.svg'
 function AppFeatures() {
   const feature = [
     {
@@ -14,7 +14,7 @@ function AppFeatures() {
       title: 'Organize Your Foodlife',
       para: 'You can now centralize your food budget and spending on our platform. We help you manage your spending and reward you with food gifts, giveaway deals, big food loans',
       link: 'Join the waiting list',
-      imageIllustration: require('../Images/feature-3.svg'),
+      imageIllustration: '{ImageL}',
     },
     {
       title: 'Buy Food Now Pay Later.',

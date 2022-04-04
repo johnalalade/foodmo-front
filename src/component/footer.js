@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './footer.css';
 import LogoFooter from '../Images/logo.svg';
 import AppleStore1 from '../Images/applestore-btn.svg';
@@ -6,12 +7,12 @@ import GoogleStore1 from '../Images/googleplay-btn.svg';
 import feautureLogo from '../Images/logo-feature.svg';
 
 function Footer() {
-//   const [userEmail2, setName2] = useState('');
+  const [userEmail, setName] = useState('');
 
-//   const handleSubmit2 = (event) => {
-//     event.preventDefault();
-//     alert(`The name you entered was: ${userEmail2}`);
-//   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${userEmail}`);
+  };
 
   return (
     <div>
@@ -30,18 +31,17 @@ function Footer() {
         <div class="newsletter">
           <h6>{' We’re coming soon, let’s notify you.'}</h6>
           <span>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <input
                 type="email"
-                //   value={userEmail2}
-                //   placeholder="enter your email address"
-                //   onChange={(e) => setName2(e.target.value)}
+                value={userEmail}
+                placeholder="enter your email address"
+                onChange={(e) => setName(e.target.value)}
               />
-
-            </form>
-            <button>
+              <button type="submit">
                 <span class="iconify" data-icon="bi:send-fill"></span>
               </button>
+            </form>
           </span>
         </div>
         <nav class="help-nav">
