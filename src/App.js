@@ -2,6 +2,7 @@ import React from 'react';
 import HeaderSection from './component/header';
 import AppFeatures from './component/features';
 import HowToDownload from './component/DownloadContainer';
+import Footer from './component/footer'
 import './index.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <HeaderSection/>
       <AppFeatures/>
       <HowToDownload/>
+      <Footer/>
     </div>
   );
 }
