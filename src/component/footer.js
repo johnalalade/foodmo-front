@@ -1,4 +1,5 @@
 import React from 'react';
+import Axios from 'axios';
 import { useState } from 'react';
 import './footer.css';
 import LogoFooter from '../Images/logo.svg';
@@ -7,17 +8,26 @@ import GoogleStore1 from '../Images/googleplay-btn.svg';
 import feautureLogo from '../Images/logo-feature.svg';
 
 function Footer() {
-  const [userEmail, setName] = useState('');
+  const url = 'https://food-mo.herokuapp.com/waiting';
+  const [userEmail, Data] = useState("");
 
-  const handleSubmit = (event) => {
+  const submit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${userEmail}`);
+    Axios.post(url, {
+      email: userEmail,
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+  const handle = (event) => {
+    Data(event.target.value);
+    console.log(event.target.value);
   };
 
   return (
     <div>
-      <footer class="footer-main">
-        <div class="company">
+      <footer className="footer-main">
+        <div className="company">
           <img src={LogoFooter} alt="" />
           <span>
             <button>
@@ -28,23 +38,24 @@ function Footer() {
             </button>
           </span>
         </div>
-        <div class="newsletter">
-          <h6>{' We’re coming soon, let’s notify you.'}</h6>
+        <div className="newsletter">
+          <h6>{' Were coming soon, lets notify you.'}</h6>
           <span>
-            <form action="" onSubmit={handleSubmit}>
+            <form onSubmit={(event) => submit(event)}>
               <input
-                type="email"
-                value={userEmail}
+                onChange={(event) => handle(event)}
+                type="text"
+                value={userEmail.email}
                 placeholder="enter your email address"
-                onChange={(e) => setName(e.target.value)}
-              />
-              <button type="submit">
-                <span class="iconify" data-icon="bi:send-fill"></span>
-              </button>
-            </form>
+                id="email"
+              ></input>
+            <button type="submit">
+              <span className="iconify" data-icon="bi:send-fill"></span>
+            </button>
+          </form>
           </span>
         </div>
-        <nav class="help-nav">
+        <nav className="help-nav">
           <h6>Help</h6>
           <ul>
             <li>
@@ -58,7 +69,7 @@ function Footer() {
             </li>
           </ul>
         </nav>
-        <nav class="help-nav">
+        <nav className="help-nav">
           <h6>Social Media</h6>
           <ul>
             <li>
@@ -74,7 +85,7 @@ function Footer() {
         </nav>
 
         <small>Copyright @2022 FoodMo ng</small>
-        <aside class="big-logo">
+        <aside className="big-logo">
           <img src={feautureLogo} alt="" />
         </aside>
       </footer>

@@ -3,6 +3,7 @@ import HeaderSection from './component/header';
 import AppFeatures from './component/features';
 import HowToDownload from './component/DownloadContainer';
 import Footer from './component/footer';
+import Faq from './component/faq';
 import './index.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <HeaderSection />
       <AppFeatures />
       <HowToDownload />
+      <Faq />
       <Footer />
     </div>
   );

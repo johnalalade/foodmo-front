@@ -1,14 +1,24 @@
 import React from 'react';
+import Axios from 'axios';
 import { useState } from 'react';
 import './HeaderContent.css';
 import headerIllustration from '../Images/header-illustration.png';
 
 function HeaderContent() {
-  const [userEmail, setName] = useState('');
+  const url = 'https://food-mo.herokuapp.com/waiting';
+  const [userEmail, Data] = useState("");
 
-  const handleSubmit = (event) => {
+  const submit = (event) => {
     event.preventDefault();
-    alert(`The name you entered was: ${userEmail}`);
+    Axios.post(url, {
+      email: userEmail,
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+  const handle = (event) => {
+    Data(event.target.value);
+    console.log(event.target.value);
   };
 
   return (
@@ -29,13 +39,14 @@ function HeaderContent() {
           </p>
         </article>
         <footer className="waiting-list">
-          <form action="" onSubmit={handleSubmit}>
+          <form onSubmit={(event) => submit(event)}>
             <input
-              type="email"
-              value={userEmail}
+              onChange={(event) => handle(event)}
+              type="text"
+              value={userEmail.email}
               placeholder="enter your email"
-              onChange={(e) => setName(e.target.value)}
-            />
+              id="email"
+            ></input>
             <button type="submit">Join the waitinglist</button>
           </form>
         </footer>

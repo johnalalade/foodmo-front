@@ -1,6 +1,7 @@
 .footer-main {
     display: flex;
     justify-content: space-between;
+    background: #1C512B;
     padding: 200px 100px;
     padding-top: 150px;
     position: relative;

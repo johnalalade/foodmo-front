@@ -1,0 +1,118 @@
+.faq-container {
+    display: flex;
+    /* min-height: 900px; */
+    overflow: hidden;
+  }
+  .faq-main {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    padding: 150px 100px;
+  
+  }
+  .faq-main header {
+    display: flex;
+  }
+  .faq-main header h3 {
+    font-family: 'oduda';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .faq-main header span {
+    color: #FBB03B;
+  }
+  .faqs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: 100%;
+    min-width: 750px; */
+    min-height: 40px;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .faq .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .faq span {
+    cursor: pointer;
+  }
+  .faq h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    overflow: hidden;
+  }
+  .faq .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .faq-content.shows {
+    height: auto;
+    max-height: 999px;
+    transition: all 0.5s ease;
+  }
+  .faq p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 1rem;
+  }
+  .faq span {
+    color: #000000;
+    font-size: 30px;
+  }
+  .faq-logo {
+    display: flex;
+    flex-basis: 40%;
+    position: relative;
+    left: 8%;
+    transform: translateY(15%);
+    overflow: hidden;
+  }
+  .faq-logo img {
+    width: 350px;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 1068px) {
+      .faq-container {
+          min-height: 900px;
+      }
+    .faq {
+        max-width: 750px;
+    }
+  }
+@media screen and (max-width: 1068px) {
+    .faq-main {
+        padding: 200px 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .faq-container {
+        flex-direction: column;
+    }
+    .faq-main {
+        padding: 50px 20px;
+    }
+    .faq-logo {
+        left: 0;
+        transform:  translate(0);
+    }
+    .faq-logo img {
+        margin: auto;
+    }
+}

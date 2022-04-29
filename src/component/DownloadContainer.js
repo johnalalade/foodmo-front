@@ -8,11 +8,16 @@ import GoogleStore from '../Images/googleplay-btn.svg';
 function HowToDownload() {
   return (
     <div className="download-container">
-      <div class="app-illustration">
+      <div className="app-illustration">
         <img src={DownloadIllustration} alt="" />
       </div>
-      <div class="download-steps">
-        <aside>
+      <div className="download-steps">
+        <aside>class
+class
+class
+class
+class
+class
           <img src={PizzaImage} alt="" />
           <span>
             <p>how it works?</p>
@@ -23,8 +28,8 @@ function HowToDownload() {
             Gain control of your <span>food</span> money with our app
           </h3>
         </header>
-        <div class="steps">
-          <span class="step">
+        <div className="steps">
+          <span className="step">
             <aside>
               <p>01</p>
             </aside>
@@ -33,7 +38,7 @@ function HowToDownload() {
               Signup to register with your phone number and add your address .
             </p>
           </span>
-          <span class="step">
+          <span className="step">
             <aside>
               <p>02</p>
             </aside>
@@ -43,7 +48,7 @@ function HowToDownload() {
               order becomes successful.
             </p>
           </span>
-          <span class="step">
+          <span className="step">
             <aside>
               <p>03</p>
             </aside>
